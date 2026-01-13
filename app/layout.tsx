@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import type { LayoutProps } from '@/lib/types';
 import './globals.css';
 
-const fnt = Inconsolata({ subsets: ['latin'] });
+const font = Inconsolata({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Reading Recorder',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="ja">
-      <body className={fnt.className}>
+      <body className={font.className}>
         <h1 className="text-4xl text-indigo-800 font-bold my-2">
           Reading Recorder
         </h1>
