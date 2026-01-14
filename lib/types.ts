@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 export type Book = {
-  id: number;
+  id: string;
   title: string;
   author: string;
   price: number;
@@ -15,8 +15,32 @@ export type Review = Book & {
   memo: string;
 };
 
+export type BookApi = {
+  id: string;
+  volumeInfo: {
+    title: string;
+    authors: string[];
+    publisher: string;
+    publishedDate: string;
+    imageLinks: {
+      smallThumbnail: string | null;
+    };
+  };
+  saleInfo: {
+    listPrice: {
+      amount: number;
+    };
+  };
+};
+
 export type LayoutProps = {
   children: ReactNode;
+};
+
+export type BookResultProps = {
+  params: Promise<{
+    keyword?: string[];
+  }>;
 };
 
 export type BookDetailsProps = {
