@@ -47,3 +47,11 @@ export type BookDetailsProps = {
   index?: number;
   book: Book;
 };
+
+export type EditFormProps = {
+  review: {
+    id: string;
+    read: string;
+    memo?: string;
+  };
+};
