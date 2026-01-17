@@ -43,6 +43,12 @@ export type BookResultProps = {
   }>;
 };
 
+export type EditPageProps = {
+  params: Promise<{
+    id: string;
+  }>;
+};
+
 export type BookDetailsProps = {
   index?: number;
   book: Book;
