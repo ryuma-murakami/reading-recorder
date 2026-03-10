@@ -10,6 +10,11 @@ export type Book = {
   image: string;
 };
 
+export type Review = Book & {
+  read: Date;
+  memo: string;
+};
+
 export type LayoutProps = {
   children: ReactNode;
 };
