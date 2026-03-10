@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import type { BookDetailsProps } from '@/lib/types';
+import type { BookDetailsProps } from '@/types/bookDetails';
 import BookDetails from './BookDetails';
 
 export default function LinkedBookDetails({ index, book }: BookDetailsProps) {

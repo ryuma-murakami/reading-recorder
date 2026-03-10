@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Inconsolata } from 'next/font/google';
 import type { Metadata } from 'next';
-import type { LayoutProps } from '@/lib/types';
+import type { LayoutProps } from '@/types/layout';
 import './globals.css';
 
 const font = Inconsolata({ subsets: ['latin'] });
