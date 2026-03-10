@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import type { BookDetailsProps } from '@/lib/types';
+import type { BookDetailsProps } from '@/types/bookDetails';
 
 export default function BookDetails({ index, book }: BookDetailsProps) {
   return (
