@@ -13,6 +13,13 @@ export async function getBooksByKeyword(keyword: string): Promise<Book[]> {
   return (data.items ?? []).map(item => createBook(item));
 }
 
+export async function getBookById(id: string): Promise<Book> {
+  const response = await fetch(`${API_URL}/${id}`, { cache: 'no-store' });
+  const data: BookApi = await response.json();
+
+  return createBook(data);
+}
+
 function createBook(item: BookApi): Book {
   const { volumeInfo, saleInfo } = item;
 
