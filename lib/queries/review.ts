@@ -8,3 +8,9 @@ export async function getAllReviews(): Promise<Review[]> {
     },
   });
 }
+
+export async function getReviewById(id: string): Promise<Review | null> {
+  return await prisma.review.findUnique({
+    where: { id },
+  });
+}
