@@ -2,10 +2,11 @@ import type { Book } from '@/types/book';
 import type { BookApi } from '@/types/bookApi';
 
 const API_URL = 'https://www.googleapis.com/books/v1/volumes';
+const key = process.env.GOOGLE_BOOKS_API_KEY;
 
 export async function getBooksByKeyword(keyword: string): Promise<Book[]> {
   const response = await fetch(
-    `${API_URL}?q=${encodeURIComponent(keyword)}&langRestrict=ja&maxResults=20&printType=books`,
+    `${API_URL}?q=${encodeURIComponent(keyword)}&key=${key}&langRestrict=ja&maxResults=20&printType=books`,
     { cache: 'no-store' },
   );
   const data: { items?: BookApi[] } = await response.json();
