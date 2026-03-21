@@ -15,24 +15,24 @@ export default function RootLayout({ children }: LayoutProps) {
   return (
     <html lang="ja">
       <body className={font.className}>
-        <h1 className="text-4xl text-indigo-800 font-bold my-2">
+        <h1 className="my-2 text-4xl font-bold text-indigo-800">
           Reading Recorder
         </h1>
         <nav>
-          <ul className="flex bg-blue-600 mb-4 pl-2">
-            <li className="px-4 py-2 my-1 hover:bg-gray-100 rounded">
-              <Link className="no-underline text-blue-300" href="/">
+          <ul className="mb-4 flex bg-blue-600 pl-2">
+            <li className="my-1 rounded px-4 py-2 hover:bg-gray-100">
+              <Link className="text-blue-300 no-underline" href="/">
                 Home
               </Link>
             </li>
-            <li className="px-4 py-2 my-1 hover:bg-gray-100 rounded">
-              <Link className="no-underline text-blue-300" href="/books">
+            <li className="my-1 rounded px-4 py-2 hover:bg-gray-100">
+              <Link className="text-blue-300 no-underline" href="/books">
                 Search
               </Link>
             </li>
-            <li className="px-4 py-2 my-1 hover:bg-gray-100 rounded">
+            <li className="my-1 rounded px-4 py-2 hover:bg-gray-100">
               <a
-                className="no-underline text-blue-300"
+                className="text-blue-300 no-underline"
                 href="https://wings.msn.to/"
                 target="_blank"
                 rel="noopener noreferrer"
